@@ -1,0 +1,28 @@
+#footer{
+  @apply w-[1100px] h-full mx-auto relative flex flex-col gap-10 justify-center 
+}
+
+.fnb{
+  @apply flex w-full gap-[30px]
+}
+.fnb a{
+  @apply text-white text-[15px] leading-[22px]
+}
+
+address{
+  @apply text-white text-opacity-70 text-[15px] leading-[22px] not-italic
+}
+
+.familySite{
+  @apply absolute top-[54px] right-0 z-20
+}
+.familySite > button{
+  @apply w-[160px] h-[38px] bg-[#3F485C] rounded-[6px] flex justify-between items-center px-4 relative
+  text-[14px] font-medium leading-5 tracking-[0.1px] font-Roboto text-white z-20
+}
+.familyList{
+  @apply absolute bottom-[39px] bg-[#3F485C] rounded-[6px] flex flex-col w-full items-start gap-2.5 p-[15px] z-10
+}
+.familyList a{
+  @apply w-full h-5 leading-5 text-[14px] text-white font-Roboto font-medium tracking-[0.1px] text-start
+}

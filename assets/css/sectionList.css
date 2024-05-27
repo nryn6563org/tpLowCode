@@ -1,0 +1,19 @@
+
+.secList{
+  @apply flex w-full pt-[80px] gap-5 justify-center
+}
+.secList > div{
+  @apply w-[204px] h-[260px] border-[1px] border-[#e3e5e9] rounded-[12px] bg-white flex flex-col items-center
+}
+.secList > div .circle{
+  @apply w-[86px] h-[86px] rounded-full bg-[#65A3FF] bg-opacity-15 flex justify-center items-center mt-6
+}
+.secList > div .txt{
+  @apply flex flex-col w-full items-center gap-3 mt-5
+}
+.secList > div .txt strong{
+  @apply text-[20px] font-bold leading-7 text-[#333]
+}
+.secList > div .txt span{
+  @apply leading-6 text-[#666] text-[16px] text-center
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @font-face {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+  }
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+em {
+  @apply not-italic;
+}
+html,
+body,
+#__nuxt,
+#__layout,
+#wrap {
+  @apply h-full;
+}
+header {
+  @apply h-[135px] bg-[#0f1a33] fixed inset-0 z-[999];
+}
+footer {
+  @apply h-[270px] bg-[#0f1a33];
+}
+#container {
+  @apply min-h-[calc(100%-270px)] pt-[135px];
+}
+.subVisual {
+  @apply w-full h-[150px] flex justify-center items-center;
+}
+.subVisual .txt {
+  @apply flex flex-col w-[1100px] h-full mx-auto justify-center items-center;
+}
+.subVisual strong {
+  @apply text-[40px] font-bold text-white leading-[73px];
+}
+.subVisual strong em {
+  @apply text-[#ffcd4b];
+}
+.subVisual span {
+  @apply text-[20px] text-white font-medium;
+}
+.subContent {
+  @apply w-[1100px] mx-auto relative;
+}
+.h-100 {
+  @apply h-[100px] block w-full;
+}

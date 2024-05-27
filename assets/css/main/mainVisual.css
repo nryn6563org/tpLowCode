@@ -1,0 +1,40 @@
+.mainvisual {
+  @apply relative w-full h-[550px] bg-[url('~/assets/images/mainvisual.png')] bg-[center_top] bg-no-repeat;
+}
+.mainvisual .box-w {
+  @apply w-[1100px] h-full mx-auto relative flex items-center;
+}
+.mainvisual .box-w .txt {
+  @apply flex flex-col gap-[25px];
+}
+.mainvisual .box-w .txt .top {
+  @apply flex flex-col gap-[3px];
+}
+.mainvisual .box-w .txt .top > em{
+  @apply text-white leading-9 text-[28px] font-bold
+}
+.mainvisual .box-w .txt .top > strong{
+  @apply text-[55px] leading-[60px] font-bold text-white
+}
+.mainvisual .box-w .txt .top > strong em{
+  @apply text-[#3190ff]
+}
+.mainvisual .box-w .txt .btm{
+  @apply leading-7 text-[20px] font-medium text-white
+}
+.visual-txt{}
+.visual-txt div.c1{
+  @apply w-[245px] h-[245px] bg-[#FFE973] bg-opacity-50 absolute top-[44px] right-[108px] rounded-full
+  flex justify-center items-center text-center leading-10 text-[30px] font-medium text-white z-10
+}
+.visual-txt div.c2{
+  @apply w-[245px] h-[245px] bg-[#96ADFF] bg-opacity-50 absolute top-[235px] right-[204px] rounded-full
+  flex justify-center items-center text-center leading-10 text-[30px] font-medium text-white z-20
+}
+.visual-txt div.c3{
+  @apply w-[245px] h-[245px] bg-[#F096FF] bg-opacity-50 absolute top-[235px] right-0 rounded-full
+  flex justify-center items-center text-center leading-10 text-[30px] font-medium text-white z-30
+}
+#container.main{
+  @apply w-full bg-[url('~/assets/images/mainbg.png')] bg-repeat-x bg-[left_135px]
+}

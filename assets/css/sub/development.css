@@ -1,0 +1,72 @@
+.development{
+  @apply w-full pt-[60px] bg-[url('~/assets/images/sub/store01.png')] bg-no-repeat bg-[center_344px] bg-[length:1072px_409px]
+}
+
+.development .txt{
+  @apply w-full text-center flex flex-col items-center gap-[30px]
+}
+
+.development .txt strong{
+  @apply text-[45px] text-black font-bold leading-[60px]
+}
+.development .txt span{
+  @apply text-[20px] leading-7 text-[#666]
+}
+
+.lecture{
+  @apply pt-[60px] flex gap-10 justify-center
+}
+.lecture .list{
+  @apply w-[530px] h-[360px] flex flex-col bg-[#F5F7FA] rounded-[12px] overflow-hidden
+}
+.lecture .list .tit{
+  @apply h-[170px] w-full flex items-center indent-[140px]
+  text-[24px] text-white font-bold
+  bg-[url('~/assets/images/sub/dev01.png')] bg-no-repeat bg-[186px_12px] bg-[#0F1A33] bg-[length:186px_auto]
+}
+.lecture .list:last-child .tit{
+  @apply bg-[url('~/assets/images/sub/dev02.png')] bg-[length:245px_127px]
+}
+
+.lec_list{
+  @apply flex items-center relative h-[190px] w-full
+  after:absolute after:content-[''] after:w-[1px] after:h-[134px] after:bg-[#d9d9d9] after:left-[265px] after:top-[18px]
+}
+.lec_list div{
+  @apply w-[265px] h-full flex flex-col justify-center items-center
+}
+.lec_list div strong{
+  @apply text-[18px] font-bold text-black leading-[25px]
+}
+.lec_list div span{
+  @apply pt-2.5 text-[#666] text-[16px] leading-6 text-center
+}
+.lec_list div button{
+  @apply mt-5
+}
+
+.tk_tree{
+  @apply mt-[80px] w-full flex flex-col gap-10 pb-[100px]
+}
+.tk_tree .tit{
+  @apply flex flex-col gap-5 items-center text-center
+}
+.tk_tree .tit em{
+  @apply text-[24px] font-medium leading-[30px] text-[#3190ff]
+}
+.tk_tree .tit strong{
+  @apply text-[30px] font-bold leading-[40px] text-black
+}
+
+.tk_tree .list{
+  @apply w-full h-[246px] bg-[#f5f7fa] rounded-[20px] flex justify-center items-center gap-5
+}
+.tk_tree .list a{
+  @apply w-[110px] flex flex-col gap-4 items-center
+}
+.tk_tree .list a span{
+  @apply text-[16px] text-center leading-6 text-[#666]
+}
+.tk_tree .list a span em{
+  @apply font-bold text-black
+}

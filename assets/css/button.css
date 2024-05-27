@@ -1,0 +1,30 @@
+.btn {
+}
+.btn-lg {
+  @apply h-[57px] rounded-[99px] px-[35px] text-[22px] font-medium;
+}
+.btn-sm {
+  @apply h-[40px] px-[25px] text-[18px] font-medium rounded-[99px];
+}
+.btn-sq-md {
+  @apply h-[50px] rounded-[5px] px-6 font-medium text-[18px];
+}
+.btn-sq-lg {
+  @apply h-[57px] rounded-[5px] px-[35px] text-[22px] font-medium;
+}
+.btn-primary {
+  @apply text-white bg-[#3190FF];
+}
+.btn-gray {
+  @apply text-white bg-[#BFBFBF];
+}
+.btn-dark-gray {
+  @apply text-white bg-[#666];
+}
+
+.btn-line-default {
+  @apply text-[#333] border-[1px] border-[#999] rounded-[5px];
+}
+.btn-long {
+  @apply px-[35px] text-[22px] !important;
+}

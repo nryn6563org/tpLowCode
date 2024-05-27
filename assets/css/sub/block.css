@@ -1,0 +1,31 @@
+.store{
+  @apply w-full pt-[60px] bg-[url('~/assets/images/sub/store01.png')] bg-no-repeat bg-[center_344px] bg-[length:1072px_409px]
+}
+
+.store .txt{
+  @apply w-full text-center flex flex-col items-center gap-[30px]
+}
+
+.store .txt strong{
+  @apply text-[45px] text-black font-bold leading-[60px]
+}
+.store .txt span{
+  @apply text-[20px] leading-7 text-[#666]
+}
+.store .txt .btn{
+  @apply mt-[549px]
+}
+
+.storeGuide{
+  @apply w-full mt-[80px] mb-[100px] rounded-[20px] bg-[#f5f7fa] p-10 h-[360px]
+  bg-[url('~/assets/images/sub/storeGuide.png')] bg-no-repeat bg-[length:462px_282px] bg-[598px_40px]
+}
+.storeGuide .txt{
+  @apply flex flex-col gap-[30px]
+}
+.storeGuide .txt strong{
+  @apply text-[24px] leading-[30px] text-black
+}
+.storeGuide .txt span{
+  @apply text-[16px] text-[#666] leading-6
+}

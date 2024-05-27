@@ -1,0 +1,19 @@
+.defaultTable {
+  @apply w-full border-separate border-t-[1px] border-[#8c8c8c] border-spacing-0;
+}
+.defaultTable thead tr th {
+  @apply h-10 border-r-[1px] border-b-[1px] border-[#dcdcdc] bg-[#f8f8f8] text-[#212121] text-[14px] font-normal;
+}
+.defaultTable thead tr th:last-child {
+  @apply border-r-0;
+}
+.defaultTable tbody tr td {
+  @apply border-r-[1px] border-b-[1px] border-[#dcdcdc] pt-[9px] pb-[8px] px-[30px] 
+  text-[14px] text-[#666] leading-5 font-normal;
+}
+.defaultTable tbody tr td:first-child {
+  @apply bg-[#f8f8f8];
+}
+.defaultTable tbody tr td:last-child {
+  @apply border-r-0 text-center;
+}

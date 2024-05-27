@@ -1,0 +1,34 @@
+.solution{
+  @apply w-full pt-[60px] pb-[366px] bg-[url('~/assets/images/sub/solution01.png')] 
+  bg-no-repeat bg-[center_bottom] bg-[length:1005px_326px]
+}
+
+.solution .txt{
+  @apply w-full text-center flex flex-col items-center gap-[30px]
+}
+
+.solution .txt strong{
+  @apply text-[45px] text-black font-bold leading-[60px]
+}
+.solution .txt span{
+  @apply text-[20px] leading-7 text-[#666]
+}
+.solution .txt .btn{
+  @apply mt-[30px]
+}
+
+.techtree{
+  @apply pb-[100px] pt-[80px]
+}
+.techtree .title{
+  @apply flex w-full flex-col gap-5 items-center 
+}
+.techtree .title em{
+  @apply text-[#3190ff] text-[24px] font-medium leading-[31px]
+}
+.techtree .title span{
+  @apply text-black text-[30px] leading-[40px] font-bold
+}
+.secList{
+  @apply pt-[60px]
+}

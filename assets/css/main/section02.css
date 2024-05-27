@@ -1,0 +1,15 @@
+.sec02{
+  @apply w-full bg-[#F5F7FA] h-[704px] py-[80px]
+}
+.sec02 > .txt{
+  @apply w-[1100px] h-[204px] flex flex-col gap-[30px] items-end bg-[url('~/assets/images/main/section02.png')] bg-[0_3px] bg-no-repeat mx-auto
+}
+.sec02 > .txt strong{
+  @apply w-[477px] leading-[60px] text-[45px] font-bold text-black
+}
+.sec02 > .txt strong em{
+  @apply text-[#3190ff]
+}
+.sec02 > .txt span{
+  @apply text-[20px] leading-7 text-[#666] w-[477px]
+}

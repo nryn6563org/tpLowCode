@@ -1,0 +1,32 @@
+#header{
+    @apply w-[1100px] mx-auto h-full relative flex justify-between items-end
+}
+.logo{
+}
+.logo a{
+    @apply flex flex-col items-start gap-2 pb-[20px]
+}
+.logo strong{
+    @apply text-[38px] font-bold text-white leading-[48px]
+}
+
+.logo strong em{
+    @apply text-[#3190ff] not-italic
+}
+
+.infoMenu{
+    @apply absolute top-5 right-0 flex gap-[25px]
+}
+.infoMenu button{
+    @apply gap-2 flex items-center
+}
+.infoMenu button span{
+    @apply text-[15px] text-opacity-50 text-white
+}
+
+.globalMenu{
+    @apply flex justify-end gap-[25px] pb-[30px]
+}
+.globalMenu a{
+    @apply leading-[25px] text-white text-[18px]
+}

@@ -1,0 +1,112 @@
+.lowcode-top {
+  @apply sticky top-[135px] pt-[60px] pb-10 w-full h-[150px] bg-white flex justify-between z-30;
+}
+.left-menu {
+  @apply flex gap-5 h-[50px];
+}
+.left-menu button.active {
+  @apply bg-black !important;
+}
+.api_board {
+  @apply w-full flex flex-col gap-10 pb-[500px];
+}
+.api_board .board-list {
+  @apply flex flex-wrap w-full gap-x-[25px] gap-y-[30px];
+}
+.api_board .board-list > strong {
+  @apply text-[26px] text-black indent-2.5 w-full;
+}
+.api_board .board-list > div {
+  @apply w-[350px] h-[213px] p-[25px] rounded-[12px] border-[1px] border-[#eaeaea]
+  hover:bg-[#F6FAFF] hover:border-[#3190FF] hover:border-[2px] hover:cursor-pointer;
+}
+.api_board .board-list > div > div {
+  @apply flex flex-col gap-2.5 w-full h-full items-end relative;
+}
+.api_board .board-list > div > div strong {
+  @apply text-black text-[20px] leading-7 font-medium w-full;
+}
+.api_board .board-list > div > div span {
+  @apply text-[#666] text-[16px] leading-6 max-h-[72px] line-clamp-3 w-full;
+}
+.api_board .board-list > div > div button {
+  @apply absolute bottom-0 right-0;
+}
+
+.api-w {
+}
+.api-w > .title {
+  @apply w-full mt-[60px] h-[65px] flex items-center justify-between pb-[15px] border-b-[1px] border-[#dcdcdc];
+}
+.api-w > .title strong {
+  @apply w-fit text-[35px] font-bold text-black;
+}
+.detailContent {
+  @apply pt-10 w-full flex flex-col gap-5;
+}
+.detailContent > .title {
+  @apply w-full flex flex-col gap-[10px];
+}
+.detailContent > .title strong {
+  @apply text-[26px] text-black font-medium leading-[33px];
+}
+.detailContent > .title span {
+  @apply text-[16px] leading-6 text-[#666];
+}
+
+.table-w {
+  @apply w-full flex flex-col items-center gap-10;
+}
+
+.priceList {
+  @apply w-full pt-[60px] flex flex-wrap gap-x-[120px] gap-y-[30px] justify-center;
+}
+.priceList strong {
+  @apply w-full text-center text-black text-[30px] font-medium leading-10;
+}
+.priceList > div {
+  @apply w-[430px] h-[415px] rounded-[40px] border-[5px] flex flex-col items-center px-[30px];
+}
+.priceList > div.personal {
+  @apply border-[#5956f8];
+}
+.priceList > div.corporate {
+  @apply border-[#3190FF];
+}
+.priceList > div .title {
+  @apply w-[251px] h-[56px] flex justify-center items-center rounded-[0_0_20px_20px]
+  text-white text-[22px] font-medium;
+}
+.priceList > div.personal .title {
+  @apply bg-[#5956ff];
+}
+.priceList > div.corporate .title {
+  @apply bg-[#3190ff];
+}
+.priceList > div .price {
+  @apply w-full mt-[30px] text-center pb-[30px] leading-[44px]  text-black border-b-[1px];
+}
+.priceList > div.personal .price {
+  @apply border-[#5956F8];
+}
+.priceList > div.corporate .price {
+  @apply border-[#3190FF];
+}
+.priceList > div .price strong {
+  @apply font-medium text-[33px];
+}
+.priceList > div .price strong em {
+  @apply font-bold;
+}
+.priceList > div .price span {
+  @apply font-medium text-[26px];
+}
+.priceList > div .txt {
+  @apply w-full h-[135px] py-[30px] text-center text-black leading-6 text-[18px] flex items-center justify-center;
+}
+.priceList > div.personal .btn{
+  @apply bg-[#5956ff] text-white flex items-center
+}
+.priceList > div.corporate .btn{
+  @apply bg-[#3190ff] text-white flex items-center
+}
