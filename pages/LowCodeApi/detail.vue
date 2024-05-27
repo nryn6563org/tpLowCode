@@ -2,10 +2,8 @@
   <div id="container" class="sub">
     <div class="subVisual">
       <div class="txt">
-        <strong><em>Low-code</em> API</strong>
-        <span
-          >빠르고 쉬운 백앤드 로우코드 개발 솔루션을 웹에서 제공합니다.</span
-        >
+        <strong><em>API</em> Service</strong>
+        <span>개인 또는 기업 비지니스에 필요한 데이터를 API로 제공해드립니다</span>
       </div>
       <!-- txt -->
     </div>
@@ -67,7 +65,7 @@
                 <span>per 1call</span>
               </div>
 
-              <div class="txt">제 3자 데이터 공유 배포 금지</div>
+              <div class="txt">호출당 데이터 요금을 부과합니다. <br>제 3자 데이터 공유나 배포 금지</div>
 
               <a href="#" class="btn btn-lg btn-person" target="_blank">
                 API 블록스토어 바로가기

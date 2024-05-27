@@ -42,6 +42,6 @@
 <style scoped>
 @import '~/assets/css/sub/block.css';
 .subVisual{
-  @apply bg-[url('~/assets/images/sub/sub_topimg04.png')] bg-no-repeat bg-[center_top] bg-[#9a5c2b]
+  @apply bg-[url('~/assets/images/sub/sub_topimg04.png')] bg-no-repeat bg-[center_top] bg-[#209168]
 }
 </style>

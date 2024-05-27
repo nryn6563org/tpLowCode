@@ -2,8 +2,8 @@
   <div id="container" class="sub">
     <div class="subVisual">
       <div class="txt">
-        <strong><em>Low-code</em> Solution</strong>
-        <span>빠르고 쉬운 백앤드 로우코드 개발 솔루션을 웹에서 제공합니다.</span>
+        <strong><em>Low-code</em> API</strong>
+        <span>개인 또는 기업 비지니스에 필요한 데이터를 API 블록스토어를 통해 제공해드립니다.</span>
       </div>
       <!-- txt -->
     </div>
