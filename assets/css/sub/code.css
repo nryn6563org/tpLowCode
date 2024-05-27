@@ -24,10 +24,10 @@
   @apply flex flex-col gap-2.5 w-full h-full items-end relative;
 }
 .api_board .board-list > div > div strong {
-  @apply text-black text-[20px] leading-7 font-medium w-full;
+  @apply text-black text-[20px] leading-7 font-medium w-full truncate;
 }
 .api_board .board-list > div > div span {
-  @apply text-[#666] text-[16px] leading-6 max-h-[72px] line-clamp-3 w-full;
+  @apply text-[#666] text-[16px] leading-6 max-h-[72px] line-clamp-3 w-full line-clamp-2;
 }
 .api_board .board-list > div > div button {
   @apply absolute bottom-0 right-0;

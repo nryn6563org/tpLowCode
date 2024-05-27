@@ -22,7 +22,7 @@
       <!-- lowcode-top -->
 
       <div class="api_board">
-        <div id="bank" class="board-list" ref="banks">
+        <div id="banks" class="board-list" ref="banks">
           <strong>AI 투자금융 API</strong>
           <div v-for="(item, index) in banks" :key="index">
             <LowBox :title="item.title" :content="item.content" :uniqueClass="'banks-' + index" />
@@ -38,7 +38,7 @@
         </div>
         <!-- publics -->
 
-        <div id="private" class="board-list" ref="privates">
+        <div id="privates" class="board-list" ref="privates">
           <strong>민간데이터 API</strong>
           <div v-for="(item, index) in privates" :key="index">
             <LowBox :title="item.title" :content="item.content" :uniqueClass="'privates-' + index" />
@@ -46,7 +46,7 @@
         </div>
         <!--  -->
 
-        <div id="ai" class="board-list" ref="ai_api">
+        <div id="ai_api" class="board-list" ref="ai_api">
           <strong>AI API</strong>
           <div v-for="(item, index) in ais" :key="index">
             <LowBox :title="item.title" :content="item.content" :uniqueClass="'ais-' + index" />
@@ -69,6 +69,7 @@ export default {
   data() {
     return {
       activeButton: 'banks',
+      observers: [], // 옵저버를 저장할 배열
       banks: [
         { title: '실적공시(확정)', content: '' },
         { title: '실적공시(잠정)', content: 'AI가 수집/분석한 잠정 실적공시 분석 데이터' },
@@ -129,22 +130,57 @@ export default {
       ]
     }
   },
+  mounted() {
+    // 컴포넌트가 마운트될 때 옵저버 설정
+    this.setupObservers()
+  },
+  beforeDestroy() {
+    // 컴포넌트가 파괴되기 전에 옵저버 해제
+    this.disconnectObservers()
+  },
   methods: {
     scrollToSection(sectionId) {
+      // 해당 섹션으로 스크롤 이동 및 activeButton 상태 업데이트
       this.activeButton = sectionId
       this.$nextTick(() => {
         const section = this.$refs[sectionId]
         if (section) {
-        // Get the current position of the section
+          // 섹션의 현재 위치를 계산
           const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset
-
-          // Calculate the target position with -150px offset
+          // -300px 오프셋을 적용하여 목표 위치를 계산
           const targetPosition = sectionPosition - 300
-
-          // Smoothly scroll to the target position
+          // 부드럽게 스크롤 이동
           window.scrollTo({ top: targetPosition, behavior: 'smooth' })
         }
       })
+    },
+    handleIntersect(entries) {
+      // 섹션이 뷰포트와 교차할 때 호출되는 메서드
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // 섹션이 보이면 activeButton 상태를 업데이트
+          this.activeButton = entry.target.id
+        }
+      })
+    },
+    setupObservers() {
+      // Intersection Observer를 설정하는 메서드
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7 // 섹션이 10% 이상 보일 때 옵저버가 트리거
+      }
+
+      // 각 섹션에 대한 옵저버를 생성하고 관찰 시작
+      this.observers = ['banks', 'publics', 'privates', 'ai_api'].map((ref) => {
+        const observer = new IntersectionObserver(this.handleIntersect, options)
+        observer.observe(this.$refs[ref])
+        return observer
+      })
+    },
+    disconnectObservers() {
+      // 컴포넌트가 파괴될 때 옵저버를 해제하는 메서드
+      this.observers.forEach(observer => observer.disconnect())
     }
   }
 }
