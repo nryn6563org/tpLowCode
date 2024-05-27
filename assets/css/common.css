@@ -2,10 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@layer base {
-  * {
-    font-family: "Spoqa Han Sans Neo", sans-serif;
-  }
+*{
+  @apply font-Spoqa
 }
 *::-webkit-scrollbar {
   display: none;
