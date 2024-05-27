@@ -1,5 +1,5 @@
 .lowcode-top {
-  @apply sticky top-[135px] pt-[60px] pb-10 w-full h-[150px] bg-white flex justify-between z-30;
+  @apply sticky top-[135px] pt-[60px] pb-10 w-full h-[150px] bg-gradient-to-b from-white via-white to-white/90 flex justify-between z-30;
 }
 .left-menu {
   @apply flex gap-5 h-[50px];
