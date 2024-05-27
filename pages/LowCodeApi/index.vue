@@ -131,47 +131,45 @@ export default {
     }
   },
   mounted() {
-    // 컴포넌트가 마운트될 때 옵저버 설정
     this.setupObservers()
   },
   beforeDestroy() {
-    // 컴포넌트가 파괴되기 전에 옵저버 해제
     this.disconnectObservers()
   },
   methods: {
     scrollToSection(sectionId) {
-      // 해당 섹션으로 스크롤 이동 및 activeButton 상태 업데이트
+      this.isScrolling = true // 스크롤 시작
       this.activeButton = sectionId
       this.$nextTick(() => {
         const section = this.$refs[sectionId]
         if (section) {
-          // 섹션의 현재 위치를 계산
           const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset
-          // -300px 오프셋을 적용하여 목표 위치를 계산
           const targetPosition = sectionPosition - 300
-          // 부드럽게 스크롤 이동
           window.scrollTo({ top: targetPosition, behavior: 'smooth' })
+
+          // 일정 시간 후 스크롤 완료로 간주하고 Intersection Observer 다시 활성화
+          setTimeout(() => {
+            this.isScrolling = false
+          }, 1000) // 스크롤 완료 예상 시간 (1초)
         }
       })
     },
     handleIntersect(entries) {
-      // 섹션이 뷰포트와 교차할 때 호출되는 메서드
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // 섹션이 보이면 activeButton 상태를 업데이트
-          this.activeButton = entry.target.id
-        }
-      })
+      if (!this.isScrolling) { // 스크롤 중이 아닐 때만 Intersection Observer 처리
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.activeButton = entry.target.id
+          }
+        })
+      }
     },
     setupObservers() {
-      // Intersection Observer를 설정하는 메서드
       const options = {
         root: null,
         rootMargin: '0px',
         threshold: 0.7 // 섹션이 10% 이상 보일 때 옵저버가 트리거
       }
 
-      // 각 섹션에 대한 옵저버를 생성하고 관찰 시작
       this.observers = ['banks', 'publics', 'privates', 'ai_api'].map((ref) => {
         const observer = new IntersectionObserver(this.handleIntersect, options)
         observer.observe(this.$refs[ref])
@@ -179,7 +177,6 @@ export default {
       })
     },
     disconnectObservers() {
-      // 컴포넌트가 파괴될 때 옵저버를 해제하는 메서드
       this.observers.forEach(observer => observer.disconnect())
     }
   }
