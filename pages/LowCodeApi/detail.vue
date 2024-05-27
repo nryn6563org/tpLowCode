@@ -49,7 +49,7 @@
             <!-- table -->
 
             <div class="tbl-btn">
-              <button class="btn btn-sq-md btn-long btn-dark-gray">
+              <button class="btn btn-sq-md btn-long btn-dark-gray" @click="backtopage">
                 리스트 페이지
               </button>
             </div>
@@ -126,6 +126,11 @@ export default {
   data() {
     return {
       conts: []
+    }
+  },
+  methods: {
+    backtopage() {
+      this.$router.go(-1)
     }
   }
 }
