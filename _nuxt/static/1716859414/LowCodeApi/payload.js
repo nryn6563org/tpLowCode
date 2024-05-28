@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/LowCodeApi", {data:[{},{}],fetch:{},mutations:void 0});
