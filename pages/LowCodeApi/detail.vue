@@ -111,7 +111,7 @@ export default {
     // 예시 비동기 작업: API 호출
     let data
     try {
-      const response = await fetch(`http://localhost:3000/tpLowCode/LowCodeAPi/${id}`)
+      const response = await fetch(`/tpLowCode/LowCodeAPi/${id}`)
       data = await response.json()
     } catch (error) {
       // console.error('데이터를 가져오는 중 오류 발생:', error)
